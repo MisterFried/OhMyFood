@@ -1,0 +1,17 @@
+@use "../abstracts/" as a;
+
+.header
+{
+    &__location
+    {
+        @include a.center-children();
+        padding: 1rem 0;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+        background-color: var(--background-color);
+        filter:brightness(95%);
+    }
+    &__icon
+    {
+        margin-right: 1em;
+    }
+}

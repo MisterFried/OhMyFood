@@ -1,6 +1,6 @@
-# Title
+# Dynamiser une page web avec des animations CSS
 
 ***
-Description
+Intégration des maquettes des différentes pages de "OhMyFood" et ajout d'animations CSS
 
 ***

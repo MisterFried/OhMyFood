@@ -1,0 +1,14 @@
+@use "../abstracts/" as a;
+
+//Generate color and background color utility classes for each color
+@each $color, $value in a.$colors
+{    
+    .-c-#{$color}
+    {
+        color: $value;
+    }
+    .-c-bg-#{$color}
+    {
+        background-color: $value;
+    }
+}
