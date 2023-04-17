@@ -6,7 +6,7 @@
 {
     @include a.center-children(column);
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 2rem 4rem;
 
     &__title
     {
@@ -19,10 +19,6 @@
         margin: 1rem 0 2rem;
         color: var(--footer-color);
         font-weight: 300;
-    }
-    .primary-button
-    {
-        margin-bottom: 2rem;
     }
 }
 
@@ -80,7 +76,7 @@
     }
 }
 
-// *************** Fonctionnement Bloc *************** //
+// *************** Restaurants Bloc *************** //
 .restaurants
 {
     padding: 1rem;
@@ -98,6 +94,7 @@
 
     &__card
     {
+        position: relative;
         display: block;
         width: min(100%,350px);
         background-color: white;
@@ -115,6 +112,7 @@
 
     &__card-content
     {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -123,6 +121,39 @@
 
     &__card-icon
     {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
         font-size: 1.6rem;
+        background: transparent;
+        z-index: 1;
+        pointer-events: none;
+
+        &.--liked
+        {
+            background: linear-gradient(var(--main-color),var(--secondary-color));
+            background-clip: text;
+            color: transparent;
+            z-index: 0;
+            opacity: 0;
+            pointer-events: all;
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover
+            {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__card-tag
+    {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        width: fit-content;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.25rem;
     }
 }

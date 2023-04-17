@@ -11,6 +11,7 @@
   --main-color: #9356DC;
   --secondary-color: #FF79DA;
   --accent-color: #99E2D0;
+  --accent-secondary-color: #008766;
   --icon-color: #7e7e7e;
   --background-color: #F7F7F7;
   --footer-color: #353535;
@@ -59,12 +60,35 @@ h2 {
 }
 
 .primary-button {
+  position: relative;
   padding: 0.9rem 1.3rem;
   border: none;
-  border-radius: 10rem;
   color: white;
-  background: linear-gradient(180deg, var(--secondary-color), var(--main-color));
+  border-radius: 10rem;
+  cursor: pointer;
+  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--main-color) 100%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+.primary-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(180deg, var(--secondary-color) 25%, var(--main-color) 120%);
+  z-index: -1;
+  opacity: 0;
+  border-radius: 10rem;
+  transition: opacity 0.2s ease-in-out;
+}
+.primary-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+.primary-button:hover::before {
+  opacity: 1;
 }
 
 .presentation {
@@ -73,7 +97,7 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 2rem 4rem;
 }
 .presentation__title {
   margin-top: 0.5rem;
@@ -83,9 +107,6 @@ h2 {
   margin: 1rem 0 2rem;
   color: var(--footer-color);
   font-weight: 300;
-}
-.presentation .primary-button {
-  margin-bottom: 2rem;
 }
 
 .fonctionnement {
@@ -149,6 +170,7 @@ h2 {
   gap: 1rem;
 }
 .restaurants__card {
+  position: relative;
   display: block;
   width: min(100%, 350px);
   background-color: white;
@@ -162,13 +184,41 @@ h2 {
   border-radius: 1rem 1rem 0 0;
 }
 .restaurants__card-content {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.8em;
 }
 .restaurants__card-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
   font-size: 1.6rem;
+  background: transparent;
+  z-index: 1;
+  pointer-events: none;
+}
+.restaurants__card-icon.--liked {
+  background: linear-gradient(var(--main-color), var(--secondary-color));
+  background-clip: text;
+  color: transparent;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: all;
+  transition: opacity 0.2s ease-in-out;
+}
+.restaurants__card-icon.--liked:hover {
+  opacity: 1;
+}
+.restaurants__card-tag {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: fit-content;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.25rem;
 }
 
 .footer {
@@ -224,6 +274,14 @@ h2 {
 
 .-c-bg-accent {
   background-color: #99E2D0;
+}
+
+.-c-accent-secondary {
+  color: #008766;
+}
+
+.-c-bg-accent-secondary {
+  background-color: #008766;
 }
 
 .-c-icon {

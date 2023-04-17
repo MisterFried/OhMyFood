@@ -27,7 +27,8 @@
         <section class="presentation -c-bg-background">
             <h2 class="presentation__title">Réservez le menu qui vous convient</h2>
             <div class="presentation__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</div>
-            <button class="presentation__button primary-button">Explorer nos restaurants</button>
+            <a href="#restaurants"><button class="presentation__button primary-button">Explorer nos
+                    restaurants</button></a>
         </section>
 
         <section class="fonctionnement">
@@ -52,10 +53,10 @@
             </div>
         </section>
 
-        <section class="restaurants -c-bg-background">
+        <section class="restaurants -c-bg-background" id="restaurants">
             <h2 class="restaurants__title">Restaurants</h2>
             <div class="restaurants__card-container">
-                <a href="#" class="restaurants__card">
+                <a href="./html/la-palette-du-gout.html" class="restaurants__card">
                     <img src="./images/restaurants/la-palette-du-gout.jpg" alt="Photo du restaurant la palette du gout"
                         class="restaurants__card-image">
                     <div class="restaurants__card-content">
@@ -64,9 +65,11 @@
                             <div class="restaurants__card-subtitle">Ménilmontant</div>
                         </div>
                         <i class="fa-regular fa-heart restaurants__card-icon"></i>
+                        <i class="fa-solid fa-heart restaurants__card-icon --liked"></i>
                     </div>
+                    <div class="restaurants__card-tag -c-bg-accent -c-accent-secondary">Nouveau</div>
                 </a>
-                <a href="#" class="restaurants__card">
+                <a href="./html/la-note-enchantée.html" class="restaurants__card">
                     <img src="./images/restaurants/la-note-enchantee.jpg" alt="Photo du restaurant la note enchantée"
                         class="restaurants__card-image">
                     <div class="restaurants__card-content">
@@ -75,9 +78,11 @@
                             <div class="restaurants__card-subtitle">Charonne</div>
                         </div>
                         <i class="fa-regular fa-heart restaurants__card-icon"></i>
+                        <i class="fa-solid fa-heart restaurants__card-icon --liked"></i>
                     </div>
+                    <div class="restaurants__card-tag -c-bg-accent -c-accent-secondary">Nouveau</div>
                 </a>
-                <a href="#" class="restaurants__card">
+                <a href="./html/a-la-francaise.html" class="restaurants__card">
                     <img src="./images/restaurants/a-la-francaise.jpg" alt="Photo du restaurant a la française"
                         class="restaurants__card-image">
                     <div class="restaurants__card-content">
@@ -86,9 +91,10 @@
                             <div class="restaurants__card-subtitle">Cité Rouge</div>
                         </div>
                         <i class="fa-regular fa-heart restaurants__card-icon"></i>
+                        <i class="fa-solid fa-heart restaurants__card-icon --liked"></i>
                     </div>
                 </a>
-                <a href="#" class="restaurants__card">
+                <a href="./html/le-delice-des-sens.html" class="restaurants__card">
                     <img src="./images/restaurants/le-delice-des-sens.jpg" alt="Photo du restaurant le délice des sens"
                         class="restaurants__card-image">
                     <div class="restaurants__card-content">
@@ -97,6 +103,7 @@
                             <div class="restaurants__card-subtitle">Folie-Méricourt</div>
                         </div>
                         <i class="fa-regular fa-heart restaurants__card-icon"></i>
+                        <i class="fa-solid fa-heart restaurants__card-icon --liked"></i>
                     </div>
                 </a>
             </div>
@@ -110,7 +117,7 @@
             <li class="footer__link"><i class="fa-solid fa-utensils footer__icon"></i>Proposer un restaurant</li>
             <li class="footer__link"><i class="fa-solid fa-handshake-angle footer__icon"></i>Devenir partenaire</li>
             <li class="footer__link">Mentions légales</li>
-            <li class="footer__link">Contact</li>
+            <li class="footer__link"><a class="footer__link" href="mailto:contact@ohmyfood.fr">Contact</a></li>
         </ul>
     </footer>
 </body>
