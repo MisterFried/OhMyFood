@@ -10,6 +10,7 @@
   --main-color: #9356DC;
   --secondary-color: #FF79DA;
   --accent-color: #99E2D0;
+  --icon-color: #7e7e7e;
   --background-color: #F7F7F7;
   --footer-color: #353535;
 }
@@ -33,6 +34,10 @@ h2 {
   font-size: 1.5rem;
 }
 
+.fonctionnement__card-text {
+  font-weight: 500;
+}
+
 .primary-button {
   padding: 0.9rem 1.3rem;
   border: none;
@@ -48,20 +53,68 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2em;
+  padding: 2rem;
   background-color: var(--background-color);
 }
 .presentation__title {
-  margin-top: 0.5em;
-  padding: 0 1em;
+  margin-top: 0.5rem;
+  padding: 0 1rem;
 }
 .presentation__text {
-  margin: 1em 0 2em;
+  margin: 1rem 0 2rem;
   color: var(--footer-color);
   font-weight: 300;
 }
 .presentation .primary-button {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
+}
+
+.fonctionnement {
+  padding: 1.25rem;
+}
+.fonctionnement__title {
+  margin-top: 1.2em;
+}
+.fonctionnement__card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.625rem 0 2rem;
+}
+.fonctionnement__card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: min(300px, 100%);
+  padding: 1.5em;
+  border-radius: 1.25rem;
+  background-color: var(--background-color);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement__card-icon {
+  margin-right: 1rem;
+  color: var(--icon-color);
+}
+.fonctionnement__card-number {
+  font-size: 0.9rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10rem;
+  padding: 0.7em;
+  color: white;
+  background-color: var(--main-color);
 }
 
 .header__location {
@@ -100,6 +153,14 @@ h2 {
 
 .-c-bg-accent {
   background-color: #99E2D0;
+}
+
+.-c-icon {
+  color: #7e7e7e;
+}
+
+.-c-bg-icon {
+  background-color: #7e7e7e;
 }
 
 .-c-background {
