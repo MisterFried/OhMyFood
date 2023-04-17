@@ -4,6 +4,7 @@
   padding: 0;
   text-decoration: none;
   list-style-type: none;
+  color: black;
 }
 
 :root {
@@ -38,6 +39,15 @@ h2 {
   font-weight: 500;
 }
 
+.restaurants__card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.restaurants__card-subtitle {
+  font-weight: 300;
+}
+
 .primary-button {
   padding: 0.9rem 1.3rem;
   border: none;
@@ -54,7 +64,6 @@ h2 {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background-color: var(--background-color);
 }
 .presentation__title {
   margin-top: 0.5rem;
@@ -115,6 +124,42 @@ h2 {
   padding: 0.7em;
   color: white;
   background-color: var(--main-color);
+}
+
+.restaurants {
+  padding: 1rem;
+}
+.restaurants__title {
+  margin: 2.5rem 0 1.8rem;
+}
+.restaurants__card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.restaurants__card {
+  display: block;
+  width: min(100%, 350px);
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.restaurants__card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.restaurants__card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em;
+}
+.restaurants__card-icon {
+  font-size: 1.6rem;
 }
 
 .header__location {
