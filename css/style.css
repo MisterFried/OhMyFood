@@ -48,6 +48,16 @@ h2 {
   font-weight: 300;
 }
 
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.125rem;
+  color: white;
+}
+
+.footer__link {
+  color: white;
+}
+
 .primary-button {
   padding: 0.9rem 1.3rem;
   border: none;
@@ -95,17 +105,16 @@ h2 {
 .fonctionnement__card {
   position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: min(300px, 100%);
+  justify-content: flex-start;
+  width: min(320px, 100%);
   padding: 1.5em;
   border-radius: 1.25rem;
   background-color: var(--background-color);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .fonctionnement__card-icon {
-  margin-right: 1rem;
+  font-size: 1.2rem;
+  margin: 0 1.5rem 0 0.5rem;
   color: var(--icon-color);
 }
 .fonctionnement__card-number {
@@ -160,6 +169,23 @@ h2 {
 }
 .restaurants__card-icon {
   font-size: 1.6rem;
+}
+
+.footer {
+  padding: 1.5rem;
+}
+.footer__title {
+  margin-bottom: 1em;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.footer__icon {
+  color: white;
+  width: 1rem;
+  margin-right: 1rem;
 }
 
 .header__location {

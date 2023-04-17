@@ -47,8 +47,9 @@
     &__card
     {
         position: relative;
-        @include a.center-children ();
-        width: min(300px, 100%);
+        display: flex;
+        justify-content: flex-start;
+        width: min(320px, 100%);
         padding: 1.5em;
         border-radius: 1.25rem;
         background-color: var(--background-color);
@@ -57,7 +58,8 @@
 
     &__card-icon
     {
-        margin-right: 1rem;
+        font-size: 1.2rem;
+        margin: 0 1.5rem 0 0.5rem;
         color: var(--icon-color);
     }
 
