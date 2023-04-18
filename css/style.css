@@ -214,6 +214,7 @@ h2 {
 }
 .restaurants__card-icon.--liked {
   background: linear-gradient(var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   z-index: 0;
