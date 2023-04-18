@@ -132,33 +132,12 @@
         padding: 0.8em;
     }
 
-    &__card-icon
+    &__card-like
     {
-        position: absolute;
-        top: 50%;
-        right: 1rem;
-        transform: translateY(-50%);
-        font-size: 1.6rem;
-        background: transparent;
-        z-index: 1;
-        pointer-events: none;
-
-        &.--liked
-        {
-            background: linear-gradient(var(--main-color),var(--secondary-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            z-index: 0;
-            opacity: 0;
-            pointer-events: all;
-            transition: opacity 0.2s ease-in-out;
-
-            &:hover
-            {
-                opacity: 1;
-            }
-        }
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
     }
 
     &__card-tag

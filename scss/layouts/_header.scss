@@ -14,4 +14,21 @@
     {
         margin-right: 1em;
     }
+
+    &__container
+    {
+        @include a.center-children();
+        position: relative;
+        width: min(100%, 1000px);
+        margin: 0 auto;
+    }
+
+    &__back-link
+    {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translate(0, -50%);
+    }
 }

@@ -49,6 +49,48 @@ h2
     color: white;
 }
 
+.carte-restaurant__name
+{
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.carte-category__title
+{
+    font-weight: 300;
+    position: relative;
+    &::before
+    {
+        content: "";
+        position: absolute;
+        top: calc(1rem + 4px);
+        width: 40px;
+        height: 3px;
+        background-color: var(--accent-color);
+    }
+}
+
+.carte-plate
+{
+    &__title
+    {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    &__description
+    {
+        font-size: 0.9375rem;
+        font-weight: 300;
+    }
+
+    &__price
+    {
+        font-size: 0.9375rem;
+        font-weight: 700;
+    }
+}
 
 // *************** responsive *************** //
 

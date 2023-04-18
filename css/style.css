@@ -59,6 +59,38 @@ h2 {
   color: white;
 }
 
+.carte-restaurant__name {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.carte-category__title {
+  font-weight: 300;
+  position: relative;
+}
+.carte-category__title::before {
+  content: "";
+  position: absolute;
+  top: calc(1rem + 4px);
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.carte-plate__title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.carte-plate__description {
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+.carte-plate__price {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
 @media screen and (width > 1024px) {
   .presentation__title {
     font-size: 2.5rem;
@@ -93,6 +125,26 @@ h2 {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 .primary-button:hover::before {
+  opacity: 1;
+}
+
+.like-button {
+  font-size: 1.6rem;
+  background: transparent;
+  z-index: 1;
+  pointer-events: none;
+}
+.like-button.--liked {
+  background: linear-gradient(var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: all;
+  transition: opacity 0.2s ease-in-out;
+}
+.like-button.--liked:hover {
   opacity: 1;
 }
 
@@ -202,28 +254,11 @@ h2 {
   align-items: center;
   padding: 0.8em;
 }
-.restaurants__card-icon {
+.restaurants__card-like {
   position: absolute;
   top: 50%;
   right: 1rem;
   transform: translateY(-50%);
-  font-size: 1.6rem;
-  background: transparent;
-  z-index: 1;
-  pointer-events: none;
-}
-.restaurants__card-icon.--liked {
-  background: linear-gradient(var(--main-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  z-index: 0;
-  opacity: 0;
-  pointer-events: all;
-  transition: opacity 0.2s ease-in-out;
-}
-.restaurants__card-icon.--liked:hover {
-  opacity: 1;
 }
 .restaurants__card-tag {
   position: absolute;
@@ -246,6 +281,72 @@ h2 {
     flex: 1 0 500px;
   }
 }
+.restaurant-image {
+  width: min(100%, 1000px);
+  max-height: 275px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.carte-restaurant, .carte-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carte-restaurant {
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem;
+  position: relative;
+  top: -2rem;
+}
+.carte-restaurant__title {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: min(100%, 500px);
+}
+.carte-restaurant__like {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+.carte-restaurant__category {
+  margin: 2rem 0;
+}
+.carte-restaurant__command-button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.carte-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.carte-category__title {
+  width: min(100%, 500px);
+}
+.carte-category__content {
+  width: min(100%, 500px);
+  background-color: white;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.carte-plate__title {
+  width: 100%;
+}
+
 .footer__container {
   max-width: 1440px;
   margin: 0 auto;
@@ -294,6 +395,22 @@ h2 {
 }
 .header__icon {
   margin-right: 1em;
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: min(100%, 1000px);
+  margin: 0 auto;
+}
+.header__back-link {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translate(0, -50%);
 }
 
 .-c-main {
