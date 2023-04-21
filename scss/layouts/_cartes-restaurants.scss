@@ -87,29 +87,36 @@
 
 .carte-plate
 {
+    &__text
+    {
+        width: 80%;
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 auto;
+    }
+
     &__title
     {
         width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: "...";
     }
 
-    &__text
-    {
-        padding: 1rem;
-        flex-grow: 1;
-        display: flex;
-        flex-wrap: wrap;
-    }
 
     &__description
     {
         width: 80%;
-
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: "...";
     }
 
     &__price
     {
-        text-align: right;
         width: 20%;
+        text-align: right;
     }
 
     &__add
@@ -122,5 +129,10 @@
         border-radius: 0 1rem 1rem 0;
         @include a.center-children();
         flex-shrink: 0;
+
+        i
+        {
+            color: white;
+        }
     }
 }
