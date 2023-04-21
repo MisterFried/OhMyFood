@@ -1,3 +1,5 @@
+@use "../abstracts/" as a;
+
 .restaurant-image
 {
     width: min(100%, 1000px);
@@ -49,6 +51,11 @@
         width: fit-content;
         margin: 0 auto;
     }
+
+    &__name
+    {
+        width: 85%;
+    }
 }
 
 .carte-category
@@ -67,12 +74,14 @@
     {
         width: min(100%,500px);
         background-color: white;
-        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 1rem;
-        padding: 1rem;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+
+        &:hover .carte-plate__add
+        {
+            width: 2em;
+        }
     }
 }
 
@@ -81,5 +90,37 @@
     &__title
     {
         width: 100%;
+    }
+
+    &__text
+    {
+        padding: 1rem;
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__description
+    {
+        width: 80%;
+
+    }
+
+    &__price
+    {
+        text-align: right;
+        width: 20%;
+    }
+
+    &__add
+    {
+        font-size: 1.5rem;
+        overflow: hidden;
+        width: 0;
+        transition: width 0.15s ease-in-out;
+        background-color: var(--accent-color);
+        border-radius: 0 1rem 1rem 0;
+        @include a.center-children();
+        flex-shrink: 0;
     }
 }
