@@ -1,0 +1,32 @@
+@use "../abstracts/" as a;
+
+.loader
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000050;
+    @include a.center-children();
+
+    &__container
+    {
+        padding: 2em;
+        margin: 1rem;
+        background-color: white;
+        @include a.center-children(column);
+        gap: 1em;
+        border-radius: 1rem;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    &__icon-container
+    {
+        font-size: 1.5rem;
+        display: flex;
+        gap: 1em;
+    }
+}

@@ -1,0 +1,50 @@
+#loader-icon-1
+{
+    animation: animation 4s ease-in-out 0s infinite normal none;
+}
+
+#loader-icon-2
+{
+    animation: animation 4s ease-in-out 1s infinite normal none;
+}
+
+#loader-icon-3
+{
+    animation: animation 4s ease-in-out 2s infinite normal none;
+}
+
+#loader
+{
+    animation : display 0s ease-in-out 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation
+{
+    0%
+    {
+        transform: scale(1) translate(0, 0);
+    }
+
+    25%
+    {
+        transform: translate(0, -100%) scale(1.2);
+    }
+
+    50%
+    {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes display
+{
+    to
+    {
+        z-index: -1;
+        visibility: hidden;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+    }
+}
