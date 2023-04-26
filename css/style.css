@@ -581,5 +581,40 @@ h2 {
     height: 0;
   }
 }
+@keyframes menu-display {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.carte-category:nth-child(2) {
+  transform: translateX(-50%);
+  opacity: 0;
+  animation-name: menu-display;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+.carte-category:nth-child(3) {
+  transform: translateX(-50%);
+  opacity: 0;
+  animation-name: menu-display;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.carte-category:nth-child(4) {
+  transform: translateX(-50%);
+  opacity: 0;
+  animation-name: menu-display;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
 
 /*# sourceMappingURL=style.css.map */

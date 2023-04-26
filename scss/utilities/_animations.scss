@@ -48,3 +48,27 @@
         height: 0;
     }
 }
+
+@keyframes menu-display
+{
+    to
+    {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@for $n from 2 through 4
+{
+    .carte-category:nth-child(#{$n})
+    {
+        $delay : calc($n - 2);
+        transform: translateX(-50%);
+        opacity: 0;
+        animation-name: menu-display;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: $delay+s;
+    }
+}
