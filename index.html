@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet">
-    <link href="./images/favicon/favicon.png" rel="icon">
+    <link href="./images/favicon/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap"
@@ -18,7 +18,8 @@
 <body>
     <header class="header">
         <h1 class="header__title">ohmyfood</h1>
-        <div class="header__location -c-footer"><i class="fa-solid fa-location-dot header__icon"></i>Paris, Belleville
+        <div class="header__location -c-footer">
+            <i class="fa-solid fa-location-dot header__icon"></i>Paris, Belleville
         </div>
     </header>
 
@@ -26,31 +27,29 @@
     <main>
         <section class="presentation -c-bg-background">
             <h2 class="presentation__title">Réservez le menu qui vous convient</h2>
-            <div class="presentation__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</div>
+            <p class="presentation__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <a href="#restaurants"><button class="presentation__button primary-button">Explorer nos
                     restaurants</button></a>
         </section>
 
         <section class="fonctionnement">
-            <div class="fonctionnement__container">
-                <h2 class="fonctionnement__title">Fonctionnement</h2>
-                <div class="fonctionnement__card-container">
-                    <div class="fonctionnement__card">
-                        <div class="fonctionnement__card-number">1</div>
-                        <div class="fonctionnement__card-text"><i
-                                class="fa-solid fa-mobile-screen-button fonctionnement__card-icon"></i>Choisissez un
-                            restaurant</div>
-                    </div>
-                    <div class="fonctionnement__card">
-                        <div class="fonctionnement__card-number">2</div>
-                        <div class="fonctionnement__card-text"><i
-                                class="fa-solid fa-list-ul fonctionnement__card-icon"></i>Composez votre menu</div>
-                    </div>
-                    <div class="fonctionnement__card">
-                        <div class="fonctionnement__card-number">3</div>
-                        <div class="fonctionnement__card-text"><i
-                                class="fa-solid fa-store fonctionnement__card-icon -c-main"></i>Dégustez au restaurant
-                        </div>
+            <h2 class="fonctionnement__title">Fonctionnement</h2>
+            <div class="fonctionnement__card-container">
+                <div class="fonctionnement__card">
+                    <div class="fonctionnement__card-number">1</div>
+                    <div class="fonctionnement__card-text"><i
+                            class="fa-solid fa-mobile-screen-button fonctionnement__card-icon"></i>Choisissez un
+                        restaurant</div>
+                </div>
+                <div class="fonctionnement__card">
+                    <div class="fonctionnement__card-number">2</div>
+                    <div class="fonctionnement__card-text"><i
+                            class="fa-solid fa-list-ul fonctionnement__card-icon"></i>Composez votre menu</div>
+                </div>
+                <div class="fonctionnement__card">
+                    <div class="fonctionnement__card-number">3</div>
+                    <div class="fonctionnement__card-text"><i
+                            class="fa-solid fa-store fonctionnement__card-icon -c-main"></i>Dégustez au restaurant
                     </div>
                 </div>
             </div>
@@ -64,10 +63,8 @@
                         <img src="./images/restaurants/la-palette-du-gout.jpg"
                             alt="Photo du restaurant la palette du gout" class="restaurants__card-image">
                         <div class="restaurants__card-content">
-                            <div class="restaurants__card-text">
-                                <div class="restaurants__card-title">La palette du goût</div>
-                                <div class="restaurants__card-subtitle">Ménilmontant</div>
-                            </div>
+                            <h3 class="restaurants__card-title">La palette du goût</h3>
+                            <span class="restaurants__card-subtitle">Ménilmontant</span>
                             <i class="fa-regular fa-heart restaurants__card-like like-button"></i>
                             <i class="fa-solid fa-heart restaurants__card-like like-button --liked"></i>
                         </div>
@@ -77,10 +74,8 @@
                         <img src="./images/restaurants/la-note-enchantee.jpg"
                             alt="Photo du restaurant la note enchantée" class="restaurants__card-image">
                         <div class="restaurants__card-content">
-                            <div class="restaurants__card-text">
-                                <div class="restaurants__card-title">La note enchantée</div>
-                                <div class="restaurants__card-subtitle">Charonne</div>
-                            </div>
+                            <h3 class="restaurants__card-title">La note enchantée</h3>
+                            <span class="restaurants__card-subtitle">Charonne</span>
                             <i class="fa-regular fa-heart restaurants__card-like like-button"></i>
                             <i class="fa-solid fa-heart restaurants__card-like like-button --liked"></i>
                         </div>
@@ -90,10 +85,8 @@
                         <img src="./images/restaurants/a-la-francaise.jpg" alt="Photo du restaurant a la française"
                             class="restaurants__card-image">
                         <div class="restaurants__card-content">
-                            <div class="restaurants__card-text">
-                                <div class="restaurants__card-title">À la française</div>
-                                <div class="restaurants__card-subtitle">Cité Rouge</div>
-                            </div>
+                            <h3 class="restaurants__card-title">À la française</h3>
+                            <span class="restaurants__card-subtitle">Cité Rouge</span>
                             <i class="fa-regular fa-heart restaurants__card-like like-button"></i>
                             <i class="fa-solid fa-heart restaurants__card-like like-button --liked"></i>
                         </div>
@@ -102,10 +95,8 @@
                         <img src="./images/restaurants/le-delice-des-sens.jpg"
                             alt="Photo du restaurant le délice des sens" class="restaurants__card-image">
                         <div class="restaurants__card-content">
-                            <div class="restaurants__card-text">
-                                <div class="restaurants__card-title">Le délice des sens</div>
-                                <div class="restaurants__card-subtitle">Folie-Méricourt</div>
-                            </div>
+                            <h3 class="restaurants__card-title">Le délice des sens</h3>
+                            <span class="restaurants__card-subtitle">Folie-Méricourt</span>
                             <i class="fa-regular fa-heart restaurants__card-like like-button"></i>
                             <i class="fa-solid fa-heart restaurants__card-like like-button --liked"></i>
                         </div>

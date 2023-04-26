@@ -1,25 +1,19 @@
 #loader-icon-1
 {
-    animation: animation 4s ease-in-out 0s infinite normal none;
+    animation: move-loader-icon 4s ease-in-out 0s infinite normal none;
 }
 
 #loader-icon-2
 {
-    animation: animation 4s ease-in-out 1s infinite normal none;
+    animation: move-loader-icon 4s ease-in-out 1s infinite normal none;
 }
 
 #loader-icon-3
 {
-    animation: animation 4s ease-in-out 2s infinite normal none;
+    animation: move-loader-icon 4s ease-in-out 2s infinite normal none;
 }
 
-#loader
-{
-    animation : display 0s ease-in-out 5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animation
+@keyframes move-loader-icon
 {
     0%
     {
@@ -37,27 +31,25 @@
     }
 }
 
-@keyframes display
+
+#loader
+{
+    animation : display-loader 0s ease-in-out 4s forwards;
+}
+
+@keyframes display-loader
 {
     to
     {
-        z-index: -1;
         visibility: hidden;
-        overflow: hidden;
+        z-index: -1;
+
         width: 0;
         height: 0;
     }
 }
 
-@keyframes menu-display
-{
-    to
-    {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-}
-
+//select each category of the menu with nth child 2 to 4
 @for $n from 2 through 4
 {
     .carte-category:nth-child(#{$n})
@@ -65,10 +57,15 @@
         $delay : calc($n - 2);
         transform: translateX(-50%);
         opacity: 0;
-        animation-name: menu-display;
-        animation-duration: 1.5s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-delay: $delay+s;
+        animation: menu-display 1.5s ease-in-out $delay+s forwards;
+    }
+}
+
+@keyframes menu-display
+{
+    to
+    {
+        opacity: 1;
+        transform: translateX(0%);
     }
 }

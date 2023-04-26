@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/style.css" rel="stylesheet">
-    <link href="./images/favicon/favicon.png" rel="icon">
+    <link href="../images/favicon/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap"
@@ -28,89 +28,90 @@
         <img class="restaurant-image" src="../images/restaurants/a-la-francaise.jpg"
             alt="Photo du restaurant À la française"></img>
         <div class="carte-wrapper -c-bg-background">
+            <!-- wrapper used to get the background correctly placed since the div below is "transform: translate" -->
             <div class="carte-restaurant -c-bg-background">
                 <div class="carte-restaurant__title">
-                    <h3 class="carte-restaurant__name">À la française</h3>
+                    <h2 class="carte-restaurant__name">À la française</h2>
                     <i class="fa-regular fa-heart carte-restaurant__like like-button"></i>
                     <i class="fa-solid fa-heart carte-restaurant__like like-button --liked"></i>
                 </div>
                 <div class="carte-restaurant__category carte-category">
-                    <h4 class="carte-category__title">ENTRÉES</h4>
+                    <h3 class="carte-category__title">ENTRÉES</h3>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Tartare de poulpe acidulé</div>
-                            <div class="carte-plate__description">Aux zestes d'orange</div>
-                            <div class="carte-plate__price">25€</div>
+                            <p class="carte-plate__title">Tartare de poulpe acidulé</p>
+                            <p class="carte-plate__description">Aux zestes d'orange</p>
+                            <span class="carte-plate__price">25€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Velouté de légumes d'antan</div>
-                            <div class="carte-plate__description">Carotte, panais, topinambour</div>
-                            <div class="carte-plate__price">35€</div>
+                            <p class="carte-plate__title">Velouté de légumes d'antan</p>
+                            <p class="carte-plate__description">Carotte, panais, topinambour</p>
+                            <span class="carte-plate__price">35€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Soupe à l'oignon</div>
-                            <div class="carte-plate__description">Revisitée</div>
-                            <div class="carte-plate__price">20€</div>
-                        </div>
-                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
-                    </div>
-                </div>
-                <div class="carte-restaurant__category carte-category">
-                    <h4 class="carte-category__title">PLATS</h4>
-                    <div class="carte-category__content">
-                        <div class="carte-plate__text">
-                            <div class="carte-plate__title">Coquilles Saint-Jacques</div>
-                            <div class="carte-plate__description">Accompagnées d'une purée de panais</div>
-                            <div class="carte-plate__price">40€</div>
-                        </div>
-                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
-                    </div>
-                    <div class="carte-category__content">
-                        <div class="carte-plate__text">
-                            <div class="carte-plate__title">Magret de canard</div>
-                            <div class="carte-plate__description">Et parmentier de pommes de terre</div>
-                            <div class="carte-plate__price">35€</div>
-                        </div>
-                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
-                    </div>
-                    <div class="carte-category__content">
-                        <div class="carte-plate__text">
-                            <div class="carte-plate__title">Pigeonneau d’Ille-et-Vilaine</div>
-                            <div class="carte-plate__description">Sur son lit de gnocchis aux légumes</div>
-                            <div class="carte-plate__price">44€</div>
+                            <p class="carte-plate__title">Soupe à l'oignon</p>
+                            <p class="carte-plate__description">Revisitée</p>
+                            <span class="carte-plate__price">20€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                 </div>
                 <div class="carte-restaurant__category carte-category">
-                    <h4 class="carte-category__title">DESSERTS</h4>
+                    <h3 class="carte-category__title">PLATS</h3>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Pétales de violettes glacés</div>
-                            <div class="carte-plate__description">Et purée de noisettes</div>
-                            <div class="carte-plate__price">18€</div>
+                            <p class="carte-plate__title">Coquilles Saint-Jacques</p>
+                            <p class="carte-plate__description">Accompagnées d'une purée de panais</p>
+                            <span class="carte-plate__price">40€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Fondant au chocolat</div>
-                            <div class="carte-plate__description">Revisité</div>
-                            <div class="carte-plate__price">22€</div>
+                            <p class="carte-plate__title">Magret de canard</p>
+                            <p class="carte-plate__description">Et parmentier de pommes de terre</p>
+                            <span class="carte-plate__price">35€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Millefeuille croustillant</div>
-                            <div class="carte-plate__description">Myrtilles et pâte d’amande</div>
-                            <div class="carte-plate__price">23€</div>
+                            <p class="carte-plate__title">Pigeonneau d’Ille-et-Vilaine</p>
+                            <p class="carte-plate__description">Sur son lit de gnocchis aux légumes</p>
+                            <span class="carte-plate__price">44€</span>
+                        </div>
+                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
+                    </div>
+                </div>
+                <div class="carte-restaurant__category carte-category">
+                    <h3 class="carte-category__title">DESSERTS</h3>
+                    <div class="carte-category__content">
+                        <div class="carte-plate__text">
+                            <p class="carte-plate__title">Pétales de violettes glacés</p>
+                            <p class="carte-plate__description">Et purée de noisettes</p>
+                            <span class="carte-plate__price">18€</span>
+                        </div>
+                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
+                    </div>
+                    <div class="carte-category__content">
+                        <div class="carte-plate__text">
+                            <p class="carte-plate__title">Fondant au chocolat</p>
+                            <p class="carte-plate__description">Revisité</p>
+                            <span class="carte-plate__price">22€</span>
+                        </div>
+                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
+                    </div>
+                    <div class="carte-category__content">
+                        <div class="carte-plate__text">
+                            <p class="carte-plate__title">Millefeuille croustillant</p>
+                            <p class="carte-plate__description">Myrtilles et pâte d’amande</p>
+                            <span class="carte-plate__price">23€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>

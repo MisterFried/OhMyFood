@@ -5,11 +5,14 @@
     &__location
     {
         @include a.center-children();
+
         padding: 1rem 0;
-        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+
         background-color: var(--background-color);
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
         filter:brightness(95%);
     }
+
     &__icon
     {
         margin-right: 1em;
@@ -19,16 +22,19 @@
     {
         @include a.center-children();
         position: relative;
+
         width: min(100%, 1000px);
         margin: 0 auto;
     }
 
     &__back-link
     {
-        font-size: 1.5rem;
         position: absolute;
         top: 50%;
         left: 1rem;
+
+        font-size: 1.5rem;
+        
         transform: translate(0, -50%);
     }
 }

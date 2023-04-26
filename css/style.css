@@ -2,9 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style-type: none;
   color: black;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 :root {
@@ -21,18 +21,18 @@
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-family: "Shrikhand", cursive;
-  text-align: center;
-  font-size: 1.875rem;
+.header__title {
   padding: 0.4em 0 0.2em;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.875rem;
+  text-align: center;
 }
 
 .header__location {
   font-weight: 500;
 }
 
-h2 {
+.presentation__title {
   font-size: 1.5rem;
 }
 
@@ -66,15 +66,15 @@ h2 {
 }
 
 .carte-category__title {
-  font-weight: 300;
   position: relative;
+  font-weight: 300;
 }
 .carte-category__title::before {
-  content: "";
   position: absolute;
   top: calc(1rem + 4px);
   width: 40px;
   height: 3px;
+  content: "";
   background-color: var(--accent-color);
 }
 
@@ -104,49 +104,49 @@ h2 {
   position: relative;
   padding: 0.9rem 1.3rem;
   border: none;
-  color: white;
   border-radius: 10rem;
-  cursor: pointer;
   background: linear-gradient(180deg, var(--secondary-color) 0%, var(--main-color) 100%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .primary-button::before {
-  content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  background: linear-gradient(180deg, var(--secondary-color) 25%, var(--main-color) 120%);
+  bottom: 0;
+  left: 0;
   z-index: -1;
-  opacity: 0;
+  content: "";
   border-radius: 10rem;
+  background: linear-gradient(180deg, var(--secondary-color) 25%, var(--main-color) 120%);
   transition: opacity 0.2s ease-in-out;
+  opacity: 0;
 }
 .primary-button:hover {
-  transform: scale(1.05);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
 }
 .primary-button:hover::before {
   opacity: 1;
 }
 
 .like-button {
-  font-size: 1.6rem;
-  background: transparent;
   z-index: 1;
+  background: transparent;
+  font-size: 1.6rem;
   pointer-events: none;
 }
 .like-button.--liked {
+  z-index: 0;
   background: linear-gradient(var(--main-color), var(--secondary-color));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  z-index: 0;
+  transition: opacity 0.2s ease-in-out;
   opacity: 0;
   pointer-events: all;
-  transition: opacity 0.2s ease-in-out;
 }
 .like-button.--liked:hover {
   opacity: 1;
@@ -158,30 +158,30 @@ h2 {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3137254902);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3137254902);
 }
 .loader__container {
-  padding: 2em;
-  margin: 1rem;
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1em;
+  padding: 2em;
+  margin: 1rem;
   border-radius: 1rem;
+  background-color: white;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 .loader__icon-container {
-  font-size: 1.5rem;
   display: flex;
   gap: 1em;
+  font-size: 1.5rem;
 }
 
 .presentation {
@@ -189,8 +189,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 2rem 2rem 4rem;
+  text-align: center;
 }
 .presentation__title {
   margin-top: 0.5rem;
@@ -198,11 +198,11 @@ h2 {
 }
 .presentation__text {
   margin: 1rem 0 2rem;
-  color: var(--footer-color);
   font-weight: 300;
+  color: var(--footer-color);
 }
 
-.fonctionnement__container {
+.fonctionnement {
   max-width: 1250px;
   margin: 0 auto;
   padding: 1.25rem;
@@ -229,32 +229,31 @@ h2 {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .fonctionnement__card-icon {
-  font-size: 1.2rem;
   margin: 0 1.5rem 0 0.5rem;
+  font-size: 1.2rem;
   color: var(--icon-color);
 }
 .fonctionnement__card-number {
-  font-size: 0.9rem;
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 1rem;
   height: 1rem;
-  border-radius: 10rem;
   padding: 0.7em;
-  color: white;
+  border-radius: 10rem;
   background-color: var(--main-color);
+  font-size: 0.9rem;
+  color: white;
+  transform: translate(-50%, -50%);
 }
 
 .restaurants__container {
   max-width: 1250px;
   margin: 0 auto;
-  padding: 1.25rem;
   padding: 1rem;
 }
 .restaurants__title {
@@ -273,21 +272,18 @@ h2 {
   display: block;
   flex: 1 1 300px;
   max-width: 400px;
-  background-color: white;
   border-radius: 1rem;
+  background-color: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 .restaurants__card-image {
   width: 100%;
   height: 160px;
-  object-fit: cover;
   border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
 }
 .restaurants__card-content {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0.8em;
 }
 .restaurants__card-like {
@@ -318,11 +314,11 @@ h2 {
   }
 }
 .restaurant-image {
+  display: block;
   width: min(100%, 1000px);
   max-height: 275px;
-  object-fit: cover;
-  display: block;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .carte-restaurant, .carte-wrapper {
@@ -331,18 +327,15 @@ h2 {
 }
 
 .carte-restaurant {
-  border-radius: 2rem 2rem 0 0;
-  padding: 1rem;
   position: relative;
   top: -2rem;
+  padding: 1rem;
+  border-radius: 2rem 2rem 0 0;
 }
 .carte-restaurant__title {
-  margin: 1rem auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
   width: min(100%, 500px);
+  margin: 1rem auto;
 }
 .carte-restaurant__like {
   position: absolute;
@@ -365,6 +358,7 @@ h2 {
 .carte-category {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
@@ -372,22 +366,22 @@ h2 {
   width: min(100%, 500px);
 }
 .carte-category__content {
+  display: flex;
   width: min(100%, 500px);
+  border-radius: 1rem;
   background-color: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  display: flex;
 }
 .carte-category__content:hover .carte-plate__add {
   width: 2em;
 }
 
 .carte-plate__text {
-  width: 80%;
-  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 auto;
+  width: 80%;
+  padding: 1rem;
 }
 .carte-plate__title {
   width: 100%;
@@ -406,17 +400,17 @@ h2 {
   text-align: right;
 }
 .carte-plate__add {
-  font-size: 1.5rem;
-  overflow: hidden;
-  width: 0;
-  transition: width 0.15s ease-in-out;
-  background-color: var(--accent-color);
-  border-radius: 0 1rem 1rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  width: 0;
+  border-radius: 0 1rem 1rem 0;
+  background-color: var(--accent-color);
+  font-size: 1.5rem;
+  overflow: hidden;
+  transition: width 0.15s ease-in-out;
 }
 .carte-plate__add i {
   color: white;
@@ -436,9 +430,9 @@ h2 {
   gap: 0.3rem;
 }
 .footer__icon {
-  color: white;
   width: 1rem;
   margin-right: 1rem;
+  color: white;
 }
 
 @media screen and (width > 950px) {
@@ -464,8 +458,8 @@ h2 {
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
-  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--background-color);
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
   filter: brightness(95%);
 }
 .header__icon {
@@ -481,10 +475,10 @@ h2 {
   margin: 0 auto;
 }
 .header__back-link {
-  font-size: 1.5rem;
   position: absolute;
   top: 50%;
   left: 1rem;
+  font-size: 1.5rem;
   transform: translate(0, -50%);
 }
 
@@ -545,23 +539,18 @@ h2 {
 }
 
 #loader-icon-1 {
-  animation: animation 4s ease-in-out 0s infinite normal none;
+  animation: move-loader-icon 4s ease-in-out 0s infinite normal none;
 }
 
 #loader-icon-2 {
-  animation: animation 4s ease-in-out 1s infinite normal none;
+  animation: move-loader-icon 4s ease-in-out 1s infinite normal none;
 }
 
 #loader-icon-3 {
-  animation: animation 4s ease-in-out 2s infinite normal none;
+  animation: move-loader-icon 4s ease-in-out 2s infinite normal none;
 }
 
-#loader {
-  animation: display 0s ease-in-out 5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes animation {
+@keyframes move-loader-icon {
   0% {
     transform: scale(1) translate(0, 0);
   }
@@ -572,49 +561,41 @@ h2 {
     transform: translate(0, 0) scale(1);
   }
 }
-@keyframes display {
+#loader {
+  animation: display-loader 0s ease-in-out 4s forwards;
+}
+
+@keyframes display-loader {
   to {
-    z-index: -1;
     visibility: hidden;
-    overflow: hidden;
+    z-index: -1;
     width: 0;
     height: 0;
-  }
-}
-@keyframes menu-display {
-  to {
-    transform: translateX(0%);
-    opacity: 1;
   }
 }
 .carte-category:nth-child(2) {
   transform: translateX(-50%);
   opacity: 0;
-  animation-name: menu-display;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
+  animation: menu-display 1.5s ease-in-out 0s forwards;
 }
 
 .carte-category:nth-child(3) {
   transform: translateX(-50%);
   opacity: 0;
-  animation-name: menu-display;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation: menu-display 1.5s ease-in-out 1s forwards;
 }
 
 .carte-category:nth-child(4) {
   transform: translateX(-50%);
   opacity: 0;
-  animation-name: menu-display;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
+  animation: menu-display 1.5s ease-in-out 2s forwards;
+}
+
+@keyframes menu-display {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/style.css" rel="stylesheet">
-    <link href="./images/favicon/favicon.png" rel="icon">
+    <link href=".../images/favicon/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap"
@@ -28,89 +28,90 @@
         <img class="restaurant-image" src="../images/restaurants/le-delice-des-sens.jpg"
             alt="Photo du restaurant Le délice des sens"></img>
         <div class="carte-wrapper -c-bg-background">
+            <!-- wrapper used to get the background correctly placed since the div below is "transform: translate" -->
             <div class="carte-restaurant -c-bg-background">
                 <div class="carte-restaurant__title">
-                    <h3 class="carte-restaurant__name">Le délice des sens</h3>
+                    <h2 class="carte-restaurant__name">Le délice des sens</h2>
                     <i class="fa-regular fa-heart carte-restaurant__like like-button"></i>
                     <i class="fa-solid fa-heart carte-restaurant__like like-button --liked"></i>
                 </div>
                 <div class="carte-restaurant__category carte-category">
-                    <h4 class="carte-category__title">ENTRÉES</h4>
+                    <h3 class="carte-category__title">ENTRÉES</h3>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Tartare de thon</div>
-                            <div class="carte-plate__description">Assaisonné au yuzu</div>
-                            <div class="carte-plate__price">25€</div>
+                            <p class="carte-plate__title">Tartare de thon</p>
+                            <p class="carte-plate__description">Assaisonné au yuzu</p>
+                            <span class="carte-plate__price">25€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Bouchée de homard croustillant</div>
-                            <div class="carte-plate__description">Et sa farandole de petits légumes</div>
-                            <div class="carte-plate__price">35€</div>
+                            <p class="carte-plate__title">Bouchée de homard croustillant</p>
+                            <p class="carte-plate__description">Et sa farandole de petits légumes</p>
+                            <span class="carte-plate__price">35€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Velouté de cèpes</div>
-                            <div class="carte-plate__description">Aux truffes</div>
-                            <div class="carte-plate__price">20€</div>
-                        </div>
-                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
-                    </div>
-                </div>
-                <div class="carte-restaurant__category carte-category">
-                    <h4 class="carte-category__title">PLATS</h4>
-                    <div class="carte-category__content">
-                        <div class="carte-plate__text">
-                            <div class="carte-plate__title">Poulet rôti aux herbes de Provence</div>
-                            <div class="carte-plate__description">Et sa crème de truffe</div>
-                            <div class="carte-plate__price">40€</div>
-                        </div>
-                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
-                    </div>
-                    <div class="carte-category__content">
-                        <div class="carte-plate__text">
-                            <div class="carte-plate__title">Langouste rôtie</div>
-                            <div class="carte-plate__description">Et ses légumes de saison</div>
-                            <div class="carte-plate__price">35€</div>
-                        </div>
-                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
-                    </div>
-                    <div class="carte-category__content">
-                        <div class="carte-plate__text">
-                            <div class="carte-plate__title">Côte de bœuf Angus</div>
-                            <div class="carte-plate__description">Et sa purée de panais</div>
-                            <div class="carte-plate__price">44€</div>
+                            <p class="carte-plate__title">Velouté de cèpes</p>
+                            <p class="carte-plate__description">Aux truffes</p>
+                            <span class="carte-plate__price">20€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                 </div>
                 <div class="carte-restaurant__category carte-category">
-                    <h4 class="carte-category__title">DESSERTS</h4>
+                    <h3 class="carte-category__title">PLATS</h3>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Farandole de desserts</div>
-                            <div class="carte-plate__description">Du chef</div>
-                            <div class="carte-plate__price">18€</div>
+                            <p class="carte-plate__title">Poulet rôti aux herbes de Provence</p>
+                            <p class="carte-plate__description">Et sa crème de truffe</p>
+                            <span class="carte-plate__price">40€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Crème brulée</div>
-                            <div class="carte-plate__description">Revisitée</div>
-                            <div class="carte-plate__price">22€</div>
+                            <p class="carte-plate__title">Langouste rôtie</p>
+                            <p class="carte-plate__description">Et ses légumes de saison</p>
+                            <span class="carte-plate__price">35€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
                     <div class="carte-category__content">
                         <div class="carte-plate__text">
-                            <div class="carte-plate__title">Tiramisu</div>
-                            <div class="carte-plate__description">À la noisette</div>
-                            <div class="carte-plate__price">23€</div>
+                            <p class="carte-plate__title">Côte de bœuf Angus</p>
+                            <p class="carte-plate__description">Et sa purée de panais</p>
+                            <span class="carte-plate__price">44€</span>
+                        </div>
+                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
+                    </div>
+                </div>
+                <div class="carte-restaurant__category carte-category">
+                    <h3 class="carte-category__title">DESSERTS</h3>
+                    <div class="carte-category__content">
+                        <div class="carte-plate__text">
+                            <p class="carte-plate__title">Farandole de desserts</p>
+                            <p class="carte-plate__description">Du chef</p>
+                            <span class="carte-plate__price">18€</span>
+                        </div>
+                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
+                    </div>
+                    <div class="carte-category__content">
+                        <div class="carte-plate__text">
+                            <p class="carte-plate__title">Crème brulée</p>
+                            <p class="carte-plate__description">Revisitée</p>
+                            <span class="carte-plate__price">22€</span>
+                        </div>
+                        <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
+                    </div>
+                    <div class="carte-category__content">
+                        <div class="carte-plate__text">
+                            <p class="carte-plate__title">Tiramisu</p>
+                            <p class="carte-plate__description">À la noisette</p>
+                            <span class="carte-plate__price">23€</span>
                         </div>
                         <div class="carte-plate__add"><i class="fa-solid fa-circle-check"></i></div>
                     </div>
