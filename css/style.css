@@ -147,6 +147,7 @@
   transition: opacity 0.2s ease-in-out;
   opacity: 0;
   pointer-events: all;
+  cursor: pointer;
 }
 .like-button.--liked:hover {
   opacity: 1;
