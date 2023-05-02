@@ -389,13 +389,13 @@
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: "...";
+  text-overflow: ellipsis;
 }
 .carte-plate__description {
   width: 80%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: "...";
+  text-overflow: ellipsis;
 }
 .carte-plate__price {
   width: 20%;
