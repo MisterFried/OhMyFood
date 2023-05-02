@@ -1,113 +1,96 @@
-*
-{
-    font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+
+* {
+	font-family: "Roboto", sans-serif;
 }
 
-.header__title
-{
-    padding: 0.4em 0 0.2em;
+.header__title {
+	padding: 0.4em 0 0.2em;
 
-    font-family: 'Shrikhand', cursive;
-    font-size: 1.875rem;
-    text-align: center;
+	font-family: "Shrikhand", cursive;
+	font-size: 1.875rem;
+	text-align: center;
 }
 
-.header__location
-{
-    font-weight: 500;
+.header__location {
+	font-weight: 500;
 }
 
-.presentation__title
-{
-    font-size: 1.5rem;
+.presentation__title {
+	font-size: 1.5rem;
 }
 
-.fonctionnement__card-text
-{
-    font-weight: 500;
+.fonctionnement__card-text {
+	font-weight: 500;
 }
 
-.restaurants__card-title
-{
-    font-size: 1.125rem;
-    font-weight: 500;
+.restaurants__card-title {
+	font-size: 1.125rem;
+	font-weight: 500;
 }
 
-.restaurants__card-subtitle
-{
-    font-weight: 300;
+.restaurants__card-subtitle {
+	font-weight: 300;
 }
 
-.footer__title
-{
-    font-family: 'Shrikhand', cursive;
-    font-size: 1.125rem;
-    color: white;
+.footer__title {
+	font-family: "Shrikhand", cursive;
+	font-size: 1.125rem;
+	color: white;
 }
 
-.footer__link
-{
-    color: white;
+.footer__link {
+	color: white;
 }
 
-.carte-restaurant__name
-{
-    font-family: 'Shrikhand', cursive;
-    font-size: 1.75rem;
-    font-weight: 400;
+.carte-restaurant__name {
+	font-family: "Shrikhand", cursive;
+	font-size: 1.75rem;
+	font-weight: 400;
 }
 
-.carte-category__title
-{
-    position: relative;
+.carte-category__title {
+	position: relative;
 
-    font-weight: 300;
+	font-weight: 300;
 
-    &::before
-    {
-        position: absolute;
-        top: calc(1rem + 4px);
-        
-        width: 40px;
-        height: 3px;
-        content: "";
+	&::before {
+		position: absolute;
+		top: calc(1rem + 4px);
 
-        background-color: var(--accent-color);
-    }
+		width: 40px;
+		height: 3px;
+		content: "";
+
+		background-color: var(--accent-color);
+	}
 }
 
-.carte-plate
-{
-    &__title
-    {
-        font-size: 1.125rem;
-        font-weight: 500;
-    }
+.carte-plate {
+	&__title {
+		font-size: 1.125rem;
+		font-weight: 500;
+	}
 
-    &__description
-    {
-        font-size: 0.9375rem;
-        font-weight: 300;
-    }
+	&__description {
+		font-size: 0.9375rem;
+		font-weight: 300;
+	}
 
-    &__price
-    {
-        font-size: 0.9375rem;
-        font-weight: 700;
-    }
+	&__price {
+		font-size: 0.9375rem;
+		font-weight: 700;
+	}
 }
 
-.loader__text
-{
-    text-align: center;
+.loader__text {
+	text-align: center;
 }
 
 // *************** responsive *************** //
 
-@media screen and (width > 1024px)
-{    
-    .presentation__title
-    {
-        font-size: 2.5rem;
-    }
+@media screen and (width > 950px) {
+	.presentation__title {
+		font-size: 2.5rem;
+	}
 }

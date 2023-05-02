@@ -1,189 +1,163 @@
 @use "../abstracts/" as a;
 
+// *************** Presentation Bloc *************** //
+.presentation {
+	@include a.center-children(column);
+	gap: 1.5rem;
 
-// *************** Presentation Bloc *************** // 
-.presentation
-{
-    @include a.center-children(column);
+	padding: 2.5rem 2rem 2rem 2rem;
 
-    padding: 2rem 2rem 4rem;
+	text-align: center;
 
-    text-align: center;
-    
-    &__title
-    {
-        margin-top: 0.5rem;
-        padding: 0 1rem;
-    }
+	&__title {
+		padding: 0 1rem;
+	}
 
-    &__text
-    {
-        margin: 1rem 0 2rem;
-
-        font-weight: 300;
-        color: var(--footer-color);
-    }
+	&__text {
+		font-weight: 300;
+		color: var(--footer-color);
+	}
 }
 
-
 // *************** Fonctionnement Bloc *************** //
-.fonctionnement
-{
-        max-width: 1250px;
-        margin: 0 auto;
-        padding: 1.25rem;
+.fonctionnement {
+	display: flex;
+	flex-direction: column;
+	gap: 1.625rem;
 
-    &__title
-    {
-        margin-top: 1.2em;
-    }
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 2.45rem 1.25rem 4.45rem;
 
-    &__card-container
-    {
-        @include a.center-children (column);
-        gap: 1.5rem;
+	&__card-container {
+		@include a.center-children(column);
+		gap: 1.5rem;
+	}
 
-        margin: 1.625rem 0 2rem;
-    }
+	&__card {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
 
-    &__card
-    {
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
+		width: min(320px, 100%);
+		padding: 1.5em;
+		border-radius: 1.25rem;
 
-        width: min(320px, 100%);
-        padding: 1.5em;
-        border-radius: 1.25rem;
+		background-color: var(--background-color);
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+	}
 
-        background-color: var(--background-color);
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    }
+	&__card-icon {
+		margin: 0 1.5rem 0 0.5rem;
 
-    &__card-icon
-    {
-        margin: 0 1.5rem 0 0.5rem;
+		font-size: 1.2rem;
+		color: var(--icon-color);
+	}
 
-        font-size: 1.2rem;
-        color: var(--icon-color);
-    }
+	&__card-number {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		@include a.center-children();
 
-    &__card-number
-    {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        @include a.center-children();
+		width: 1rem;
+		height: 1rem;
+		padding: 0.7em;
+		border-radius: 10rem;
 
-        width: 1rem;
-        height: 1rem;
-        padding: 0.7em;
-        border-radius: 10rem;
-        
-        background-color: var(--main-color);
-        
-        font-size: 0.9rem;
-        color: white;
-        
-        transform: translate(-50%, -50%);
-    }
+		background-color: var(--main-color);
+
+		font-size: 0.9rem;
+		color: white;
+
+		transform: translate(-50%, -50%);
+	}
 }
 
 // *************** Restaurants Bloc *************** //
-.restaurants
-{
-    &__container
-    {
-        max-width: 1250px;
-        margin: 0 auto;
-        padding: 1rem;
-    }
+.restaurants {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 1.8rem;
 
-    &__title
-    {
-        margin: 2.5rem 0 1.8rem;
-    }
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 3.5rem 1rem 1rem;
+	}
 
-    &__card-container
-    {
-        @include a.center-children();
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
+	&__card-container {
+		display: grid;
+		grid-template-rows: repeat(auto, 1fr);
+		justify-items: center;
+		gap: 1rem;
+	}
 
-    &__card
-    {
-        position: relative;
-        display: block;
-        flex: 1 1 300px;
+	&__card {
+		position: relative;
+		display: block;
 
-        max-width: 400px;
-        border-radius: 1rem;
-        
-        background-color: white;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    }
+		width: 100%;
+		max-width: 500px;
+		border-radius: 1rem;
 
-    &__card-image
-    {
-        width: 100%;
-        height: 160px;
-        border-radius: 1rem 1rem 0 0;
+		background-color: white;
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+	}
 
-        object-fit: cover;
-    }
+	&__card-image {
+		width: 100%;
+		height: 160px;
+		border-radius: 1rem 1rem 0 0;
 
-    &__card-content
-    {
-        position: relative;
+		object-fit: cover;
+	}
 
-        padding: 0.8em;
-    }
+	&__card-content {
+		position: relative;
 
-    &__card-like
-    {
-        position: absolute;
-        top: 50%;
-        right: 1rem;
+		padding: 0.8em;
+	}
 
-        transform: translateY(-50%);
-    }
+	&__card-like {
+		position: absolute;
+		top: 50%;
+		right: 1rem;
 
-    &__card-tag
-    {
-        position: absolute;
-        top: 0.75rem;
-        right: 0.75rem;
+		transform: translateY(-50%);
+	}
 
-        width: fit-content;
-        padding: 0.4rem 0.6rem;
-        border-radius: 0.25rem;
-    }
+	&__card-tag {
+		position: absolute;
+		top: 0.75rem;
+		right: 0.75rem;
+
+		width: fit-content;
+		padding: 0.4rem 0.6rem;
+		border-radius: 0.25rem;
+	}
 }
 
 // *************** responsive *************** //
 
-@media screen and (width > 950px)
-{
-    .fonctionnement
-    {
-        &__card-container
-        {
-            flex-direction: row;
-            gap: 2rem;
-        }
-    }
-    
-    .restaurants
-    {
-        &__card-container
-        {
-            gap: 4rem;
-        }
-        
-        &__card
-        {
-            flex: 1 0 500px;
-        }
-    }
+@media screen and (width > 950px) {
+	.fonctionnement {
+		&__card-container {
+			flex-direction: row;
+			justify-content: flex-start;
+			gap: 2rem;
+		}
+	}
+
+	.restaurants {
+		&__card-container {
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 2.8125rem;
+			column-gap: 5.625rem;
+		}
+
+		&__card {
+			flex: 1 0 500px;
+		}
+	}
 }

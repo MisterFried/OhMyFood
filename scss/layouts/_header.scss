@@ -1,40 +1,35 @@
 @use "../abstracts/" as a;
 
-.header
-{
-    &__location
-    {
-        @include a.center-children();
+.header {
+	&__location {
+		@include a.center-children();
 
-        padding: 1rem 0;
+		padding: 1rem 0;
 
-        background-color: var(--background-color);
-        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
-        filter:brightness(95%);
-    }
+		background-color: var(--background-color);
+		box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+		filter: brightness(95%);
+	}
 
-    &__icon
-    {
-        margin-right: 1em;
-    }
+	&__icon {
+		margin-right: 1em;
+	}
 
-    &__container
-    {
-        @include a.center-children();
-        position: relative;
+	&__container {
+		@include a.center-children();
+		position: relative;
 
-        width: min(100%, 1000px);
-        margin: 0 auto;
-    }
+		width: min(100%, 1000px);
+		margin: 0 auto;
+	}
 
-    &__back-link
-    {
-        position: absolute;
-        top: 50%;
-        left: 1rem;
+	&__back-link {
+		position: absolute;
+		top: 50%;
+		left: 1rem;
 
-        font-size: 1.5rem;
-        
-        transform: translate(0, -50%);
-    }
+		font-size: 1.5rem;
+
+		transform: translate(0, -50%);
+	}
 }

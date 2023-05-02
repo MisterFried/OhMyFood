@@ -1,71 +1,64 @@
-#loader-icon-1
-{
-    animation: move-loader-icon 4s ease-in-out 0s infinite normal none;
+#loader-icon-1 {
+	animation: move-loader-icon 4s ease-in-out 0s infinite normal
+		none;
 }
 
-#loader-icon-2
-{
-    animation: move-loader-icon 4s ease-in-out 1s infinite normal none;
+#loader-icon-2 {
+	animation: move-loader-icon 4s ease-in-out 1s infinite normal
+		none;
 }
 
-#loader-icon-3
-{
-    animation: move-loader-icon 4s ease-in-out 2s infinite normal none;
+#loader-icon-3 {
+	animation: move-loader-icon 4s ease-in-out 2s infinite normal
+		none;
 }
 
-@keyframes move-loader-icon
-{
-    0%
-    {
-        transform: scale(1) translate(0, 0);
-    }
+@keyframes move-loader-icon {
+	0% {
+		transform: scale(1) translate(0, 0);
+	}
 
-    25%
-    {
-        transform: translate(0, -100%) scale(1.2);
-    }
+	25% {
+		transform: translate(0, -100%) scale(1.2);
+	}
 
-    50%
-    {
-        transform: translate(0, 0) scale(1);
-    }
+	50% {
+		transform: translate(0, 0) scale(1);
+	}
 }
 
-
-#loader
-{
-    animation : display-loader 0s ease-in-out 4s forwards;
+#loader {
+	animation: display-loader 0s ease-in-out 2s forwards;
 }
 
-@keyframes display-loader
-{
-    to
-    {
-        visibility: hidden;
-        z-index: -1;
+@keyframes display-loader {
+	to {
+		visibility: hidden;
+		z-index: -1;
 
-        width: 0;
-        height: 0;
-    }
+		width: 0;
+		height: 0;
+	}
 }
 
 //select each category of the menu with nth child 2 to 4
-@for $n from 2 through 4
-{
-    .carte-category:nth-child(#{$n})
-    {
-        $delay : calc($n - 2);
-        transform: translateX(-50%);
-        opacity: 0;
-        animation: menu-display 1.5s ease-in-out $delay+s forwards;
-    }
+@for $n from 2 through 4 {
+	.carte-category:nth-child(#{$n}) {
+		$delay: calc($n - 2);
+		transform: translateX(-50%);
+		opacity: 0;
+		animation: menu-display
+			1.5s
+			ease-in-out
+			$delay +
+			s
+			forwards;
+	}
 }
 
-@keyframes menu-display
-{
-    to
-    {
-        opacity: 1;
-        transform: translateX(0%);
-    }
+@keyframes menu-display {
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+	}
 }

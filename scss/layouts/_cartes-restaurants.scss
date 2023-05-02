@@ -1,151 +1,131 @@
 @use "../abstracts/" as a;
 
-.restaurant-image
-{
-    display: block;
+.restaurant-image {
+	display: block;
 
-    width: min(100%, 1000px);
-    max-height: 275px;
-    margin: 0 auto;
-    
-    object-fit: cover;
+	width: min(100%, 1440px);
+	max-height: 275px;
+	margin: 0 auto;
+
+	object-fit: cover;
 }
 
-.carte-restaurant, .carte-wrapper
-{
-    max-width: 900px;
-    margin: 0 auto;
+.carte-restaurant,
+.carte-wrapper {
+	max-width: 900px;
+	margin: 0 auto;
 }
 
-.carte-restaurant
-{
-    position: relative;
-    top: -2rem;
+.carte-restaurant {
+	position: relative;
+	top: -2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 
-    padding: 1rem;
-    border-radius: 2rem 2rem 0 0;
+	padding: 2rem 1rem 1rem 1rem;
+	border-radius: 2rem 2rem 0 0;
 
-    &__title
-    {
-        position: relative;
+	&__title {
+		position: relative;
 
-        width: min(100%,500px);
-        margin: 1rem auto;
-    }
+		width: min(100%, 500px);
+		margin: 0 auto;
+	}
 
-    &__like
-    {
-        position: absolute;
-        top: 50%;
-        
-        right: 1rem;
-        transform: translateY(-50%);
-    }
+	&__like {
+		position: absolute;
+		top: 50%;
 
-    &__category
-    {
-        margin: 2rem 0;
-    }
+		right: 1rem;
+		transform: translateY(-50%);
+	}
 
-    &__command-button
-    {
-        display: block;
-    
-        width: fit-content;
-        margin: 0 auto;
-    }
+	&__command-button {
+		display: block;
 
-    &__name
-    {
-        width: 85%;
-    }
+		width: fit-content;
+		margin: 1rem auto 0;
+	}
+
+	&__name {
+		width: 85%;
+	}
 }
 
-.carte-category
-{
-    @include a.center-children(column);
-    gap: 1rem;
+.carte-category {
+	@include a.center-children(column);
+	gap: 1rem;
 
-    &__title
-    {
-        width: min(100%,500px);
-    }
+	&__title {
+		width: min(100%, 500px);
+	}
 
-    &__content
-    {
-        display: flex;
+	&__content {
+		display: flex;
 
-        width: min(100%,500px);
-        border-radius: 1rem;
-        
-        background-color: white;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+		width: min(100%, 500px);
+		border-radius: 1rem;
 
-        overflow: hidden;
+		background-color: white;
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 
-        &:hover .carte-plate__add
-        {
-            width: 2em;
-        }
-    }
+		overflow: hidden;
+
+		&:hover .carte-plate__add {
+			width: 2em;
+		}
+	}
 }
 
-.carte-plate
-{
-    &__text
-    {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 1 1 auto;
+.carte-plate {
+	&__text {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1 1 auto;
 
-        width: 80%;
-        padding: 1rem;
-    }
+		width: 80%;
+		padding: 1rem;
+	}
 
-    &__title
-    {
-        width: 100%;
+	&__title {
+		width: 100%;
 
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 
+	&__description {
+		width: 80%;
 
-    &__description
-    {
-        width: 80%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+	&__price {
+		width: 20%;
 
-    &__price
-    {
-        width: 20%;
+		text-align: right;
+	}
 
-        text-align: right;
-    }
+	&__add {
+		@include a.center-children();
+		flex-shrink: 0;
 
-    &__add
-    {
-        @include a.center-children();
-        flex-shrink: 0;
+		width: 0;
+		border-radius: 0 1rem 1rem 0;
 
-        width: 0;
-        border-radius: 0 1rem 1rem 0;
-        
-        background-color: var(--accent-color);
-        
-        font-size: 1.5rem;
-        overflow: hidden;
-        
-        transition: width 0.15s ease-in-out;
+		background-color: var(--accent-color);
 
-        i
-        {
-            color: white;
-        }
-    }
+		font-size: 1.5rem;
+		overflow: hidden;
+
+		transition: width 0.15s ease-in-out;
+
+		i {
+			color: white;
+		}
+	}
 }
