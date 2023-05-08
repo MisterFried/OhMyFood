@@ -20,6 +20,11 @@
 	font-size: 1.5rem;
 }
 
+.presentation__text {
+	font-weight: 300;
+	color: var(--footer-color);
+}
+
 .fonctionnement__card-text {
 	font-weight: 500;
 }
@@ -49,6 +54,7 @@
 	font-weight: 400;
 }
 
+//underline carte category (entrée - plat - dessert)
 .carte-category__title {
 	position: relative;
 

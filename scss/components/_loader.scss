@@ -6,7 +6,7 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
-	z-index: 2;
+	z-index: 10;
 	@include a.center-children();
 
 	width: 100vw;
@@ -16,9 +16,9 @@
 
 	&__container {
 		@include a.center-children(column);
-		gap: 1em;
+		gap: 1rem;
 
-		padding: 2em;
+		padding: 2rem;
 		margin: 1rem;
 		border-radius: 1rem;
 
@@ -28,7 +28,7 @@
 
 	&__icon-container {
 		display: flex;
-		gap: 1em;
+		gap: 1rem;
 
 		font-size: 1.5rem;
 	}

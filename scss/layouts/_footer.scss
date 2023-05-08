@@ -22,7 +22,6 @@
 	}
 
 	&__icon {
-		width: 1rem;
 		margin-right: 1rem;
 
 		color: white;
@@ -33,7 +32,7 @@
 @media screen and (width > 950px) {
 	.footer {
 		&__container {
-			flex-direction: row-reverse;
+			flex-direction: row-reverse;	
 			align-items: center;
 			gap: 5rem;
 		}

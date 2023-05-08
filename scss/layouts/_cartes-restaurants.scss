@@ -33,6 +33,11 @@
 		margin: 0 auto;
 	}
 
+	&__name {
+		//prevent overlaying the like icon with absolute positioning
+		width: 85%;
+	}
+
 	&__like {
 		position: absolute;
 		top: 50%;
@@ -48,9 +53,6 @@
 		margin: 1rem auto 0;
 	}
 
-	&__name {
-		width: 85%;
-	}
 }
 
 .carte-category {
@@ -84,7 +86,6 @@
 		flex-wrap: wrap;
 		flex: 1 1 auto;
 
-		width: 80%;
 		padding: 1rem;
 	}
 
@@ -112,7 +113,6 @@
 
 	&__add {
 		@include a.center-children();
-		flex-shrink: 0;
 
 		width: 0;
 		border-radius: 0 1rem 1rem 0;
