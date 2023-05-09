@@ -12,7 +12,7 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: 0.3rem;
+		gap: 0.5rem;
 	}
 
 	&__link {
@@ -35,6 +35,8 @@
 			flex-direction: row-reverse;	
 			align-items: center;
 			gap: 5rem;
+
+			padding-top: 4rem;
 		}
 
 		&__list {

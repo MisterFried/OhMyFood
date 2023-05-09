@@ -13,7 +13,12 @@
 }
 
 .header__location {
+	color: var(--footer-color);
 	font-weight: 500;
+}
+
+.header__icon {
+	color: var(--footer-color);
 }
 
 .presentation__title {
@@ -62,7 +67,7 @@
 
 	&::before {
 		position: absolute;
-		top: calc(1rem + 4px);
+		top: calc(1rem + 10px);
 
 		width: 40px;
 		height: 3px;
