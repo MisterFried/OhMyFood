@@ -1,43 +1,33 @@
-.footer {
-	&__container {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
+@use "../abstracts" as a;
 
-		max-width: 1440px;
-		margin: 0 auto;
-		padding: 1.5rem;
-	}
+.footer {
+	@include a.flexbox(column, 1rem, start, start);
+
+	padding: 1.5rem;
+
+	background-color: var(--footer-color);
 
 	&__list {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
+		@include a.flexbox(column, 0.5rem, start, start);
 	}
-
-	&__link {
-		&:hover {
-			text-decoration: underline;
-		}
+	&__link:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--light-background-color);
 	}
-
 	&__icon {
 		margin-right: 1rem;
-
-		color: white;
 	}
 }
 
 // *************** responsive *************** //
 @media screen and (width > 950px) {
 	.footer {
-		&__container {
-			flex-direction: row-reverse;	
-			align-items: center;
-			gap: 5rem;
+		flex-direction: row-reverse;
+		justify-content: end;
+		align-items: center;
+		gap: 5rem;
 
-			padding-top: 4rem;
-		}
+		padding: 4rem 4rem 1.5rem 1.5rem;
 
 		&__list {
 			flex-direction: row;

@@ -1,34 +1,43 @@
 @use "../abstracts/" as a;
 
 .header {
+	position: relative;
+
+	&__title {
+		@include a.flexbox(column, 0, center, center);
+
+		padding: 0.4em 0 0.2em;
+	}
 	&__location {
-		@include a.center-children();
+		@include a.flexbox(row, 0, center, center);
 
 		padding: 1rem 0;
 
-		background-color: var(--background-color);
+		background-color: var(--location-background-color);
 		box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 	}
+	&__location-input {
+		width: 8rem;
+		padding: 0.2rem 0.5rem;
+		border-radius: 0.5rem;
+		border: none;
 
-	&__icon {
-		margin-right: 1em;
+		background-color: var(--location-background-color);
+
+		text-align: center;
 	}
-
-	&__container {
-		@include a.center-children();
-		position: relative;
-
-		width: min(100%, 1000px);
-		margin: 0 auto;
-	}
-
 	&__back-link {
 		position: absolute;
 		top: 50%;
 		left: 1rem;
 
-		font-size: 1.5rem;
-
 		transform: translate(0, -50%);
+	}
+}
+
+// *************** responsive *************** //
+@media screen and (width > 950px) {
+	.header__title {
+		padding: 1.5rem 0;
 	}
 }

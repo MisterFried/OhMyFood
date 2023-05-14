@@ -1,16 +1,24 @@
-#loader-icon-1 {
-	animation: move-loader-icon 4s ease-in-out 0s infinite normal
-		none;
+// *************** Loader animations ***************//
+
+//Set the delay before starting the animation on each loader icon
+@for $n from 1 through 3 {
+	#loader-icon-#{$n} {
+		animation: move-loader-icon
+			2.5s
+			ease-in-out
+			calc($n/2) + s
+			infinite
+			normal
+			none;
+	}
 }
 
-#loader-icon-2 {
-	animation: move-loader-icon 4s ease-in-out 1s infinite normal
-		none;
+#loader {
+	animation: hide-loader 0.5s ease-in-out 3s forwards;
 }
 
-#loader-icon-3 {
-	animation: move-loader-icon 4s ease-in-out 2s infinite normal
-		none;
+#loader-main {
+	animation: hide-loader-main 0.5s ease-in-out 3s forwards;
 }
 
 @keyframes move-loader-icon {
@@ -35,32 +43,28 @@
 	}
 }
 
-#loader {
-	animation: display-loader 0s ease-in-out 2s forwards;
-}
-
-@keyframes display-loader {
-	to {
+@keyframes hide-loader {
+	100% {
+		opacity: 0;
 		visibility: hidden;
-		z-index: -10;
-
-		width: 0;
-		height: 0;
 	}
 }
 
-//select each category of the menu with nth child 2 to 4
+@keyframes hide-loader-main {
+	to {
+		transform: translate(0, -100%);
+	}
+}
+
+// *************** carte menu animations ***************//
+
+//select each category of the menu
 @for $n from 2 through 4 {
-	.carte-category:nth-child(#{$n}) {
-		$delay: calc($n - 2);
+	.carte-restaurant__category:nth-child(#{$n}) {
 		transform: translateX(-50%);
 		opacity: 0;
-		animation: menu-display
-			1.5s
-			ease-in-out
-			$delay +
-			s
-			forwards;
+		$delay: calc($n - 2);
+		animation: menu-display 1.5s ease-in-out $delay + s forwards;
 	}
 }
 

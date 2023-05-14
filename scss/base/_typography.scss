@@ -2,100 +2,99 @@
 
 * {
 	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
 }
-
-.header__title {
-	padding: 0.4em 0 0.2em;
-
+//fonts
+.header__title,
+.footer__title,
+.carte-restaurant__name {
 	font-family: "Shrikhand", cursive;
-	font-size: 1.875rem;
-	text-align: center;
 }
 
-.header__location {
-	color: var(--footer-color);
+//font-weight
+.presentation__text,
+.restaurants__card-subtitle,
+.carte-restaurant__category-title,
+.carte-restaurant__description {
+	font-weight: 300;
+}
+
+.presentation__title,
+.fonctionnement__title,
+.restaurants__title,
+.carte-restaurant__price {
+	font-weight: 700;
+}
+
+.header__location,
+.fonctionnement__card-text,
+.restaurants__card-title,
+.carte-restaurant__title {
 	font-weight: 500;
 }
 
-.header__icon {
-	color: var(--footer-color);
-}
-
-.presentation__title {
-	font-size: 1.5rem;
-}
-
+//color
+.header__location,
+.header__icon,
 .presentation__text {
-	font-weight: 300;
 	color: var(--footer-color);
 }
 
-.fonctionnement__card-text {
-	font-weight: 500;
+.footer__title,
+.fonctionnement__card-number,
+.carte-restaurant__add i,
+.footer__link > a,
+.footer__icon,
+.primary-button {
+	color: var(--light-background-color);
 }
 
-.restaurants__card-title {
-	font-size: 1.125rem;
-	font-weight: 500;
+.fonctionnement__card-icon {
+	color: var(--icon-color);
 }
 
-.restaurants__card-subtitle {
-	font-weight: 300;
+.restaurants__card-tag {
+	color: var(--accent-secondary-color);
 }
 
-.footer__title {
-	font-family: "Shrikhand", cursive;
-	font-size: 1.125rem;
-	color: white;
+.fonctionnement__card:nth-child(3) i {
+	color: var(--main-color);
 }
 
-.footer__link {
-	color: white;
+//font-size
+.header__title {
+	font-size: 1.875rem;
 }
 
 .carte-restaurant__name {
-	font-family: "Shrikhand", cursive;
 	font-size: 1.75rem;
-	font-weight: 400;
 }
 
-//underline carte category (entrée - plat - dessert)
-.carte-category__title {
-	position: relative;
-
-	font-weight: 300;
-
-	&::before {
-		position: absolute;
-		top: calc(1rem + 10px);
-
-		width: 40px;
-		height: 3px;
-		content: "";
-
-		background-color: var(--accent-color);
-	}
+.header__back-link,
+.carte-restaurant__add i,
+.loader__icon-container i,
+.like-button,
+.presentation__title,
+.fonctionnement__title,
+.restaurants__title {
+	font-size: 1.5rem;
 }
 
-.carte-plate {
-	&__title {
-		font-size: 1.125rem;
-		font-weight: 500;
-	}
+.restaurants__card-title,
+.fonctionnement__card-icon,
+.footer__title,
+.carte-restaurant__title {
+	font-size: 1.125rem;
+}
 
+.carte-restaurant {
 	&__description {
 		font-size: 0.9375rem;
-		font-weight: 300;
 	}
-
 	&__price {
 		font-size: 0.9375rem;
-		font-weight: 700;
 	}
-}
-
-.loader__text {
-	text-align: center;
 }
 
 // *************** responsive *************** //

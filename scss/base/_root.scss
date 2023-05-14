@@ -1,6 +1,6 @@
 @use "../abstracts/" as a;
 
-//Create custom propoerties for each color from the color map
+//Create custom variables for each color from the color map
 :root {
 	@each $color, $value in a.$colors {
 		--#{$color}-color: #{$value};

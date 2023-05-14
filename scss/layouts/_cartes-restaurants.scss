@@ -1,133 +1,124 @@
-@use "../abstracts/" as a;
+@use "../abstracts" as a;
 
-.restaurant-image {
-	display: block;
+.main-carte-restaurant {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 15rem 2rem auto;
+}
 
-	width: min(100%, 1440px);
-	max-height: 275px;
-	margin: 0 auto;
+.image-carte-restaurant {
+	grid-column: 1 / 2;
+	grid-row: 1 / 3;
+
+	height: 100%;
+	width: 100%;
 
 	object-fit: cover;
 }
 
-.carte-restaurant,
-.carte-wrapper {
-	max-width: 900px;
-	margin: 0 auto;
-}
-
 .carte-restaurant {
-	position: relative;
-	top: -2rem;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+	grid-column: 1 / 2;
+	grid-row: 2 / 4;
+	@include a.flexbox(column, 2.5rem, start, center);
 
-	padding: 2rem 1rem 1rem 1rem;
+	@include a.setMaxWidthAndCenter(1100px);
+	padding: 2rem 0.75rem 2.5rem;
 	border-radius: 2rem 2rem 0 0;
 
-	&__title {
-		position: relative;
-
-		width: min(100%, 500px);
-		margin: 0 auto;
-	}
+	background-color: var(--background-color);
 
 	&__name {
-		//prevent overlaying the like icon with absolute positioning
-		width: 85%;
-	}
+		position: relative;
 
+		width: min(100%, 22rem);
+	}
 	&__like {
 		position: absolute;
 		top: 50%;
-
 		right: 1rem;
+
 		transform: translateY(-50%);
 	}
+	&__category {
+		@include a.flexbox(column, 1rem, start, normal);
 
-	&__command-button {
-		display: block;
-
-		width: fit-content;
-		padding-left: 3rem;
-		padding-right: 3rem;
-		margin: 1rem auto 0;
+		width: min(100%, 40rem);
 	}
+	&__category-title {
+		position: relative;
 
-}
+		&::before {
+			position: absolute;
+			bottom: -5px;
 
-.carte-category {
-	@include a.center-children(column);
-	gap: 1rem;
+			width: 40px;
+			height: 3px;
+			content: "";
 
-	&__title {
-		width: min(100%, 500px);
+			background-color: var(--accent-color);
+		}
 	}
-
 	&__content {
-		display: flex;
+		display: grid;
+		grid-template-columns: auto auto 0;
+		grid-template-rows: auto auto;
 
-		width: min(100%, 500px);
 		border-radius: 1rem;
 
-		background-color: white;
+		background-color: var(--light-background-color);
 		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 
 		overflow: hidden;
+		transition: all 0.2s ease-in-out;
 
-		&:hover .carte-plate__add {
-			width: 2em;
+		&:hover {
+			grid-template-columns: auto auto 4rem;
 		}
 	}
-}
-
-.carte-plate {
-	&__text {
-		display: flex;
-		flex-wrap: wrap;
-		flex: 1 1 auto;
-
-		padding: 1rem;
-	}
-
 	&__title {
-		width: 100%;
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
 
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		padding: 0.6rem 1rem;
+
+		@include a.hideTextOverflow();
 	}
-
 	&__description {
-		width: 90%;
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
 
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		padding: 0 0 0.6rem 1rem;
+
+		@include a.hideTextOverflow();
 	}
-
 	&__price {
-		width: 10%;
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+
+		padding: 0 1rem 0.6rem;
 
 		text-align: right;
 	}
-
 	&__add {
-		@include a.center-children();
+		@include a.flexbox(row, 0, center, center);
+		grid-column: 3 / 4;
+		grid-row: 1 / 3;
 
-		width: 0;
 		border-radius: 0 1rem 1rem 0;
 
 		background-color: var(--accent-color);
 
-		font-size: 1.5rem;
-		overflow: hidden;
-
 		transition: width 0.15s ease-in-out;
+	}
+	&__command-button {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
 
-		i {
-			color: white;
-		}
+// *************** responsive *************** //
+@media screen and (width > 950px) {
+	.carte-restaurant {
+		padding-top: 3rem;
 	}
 }

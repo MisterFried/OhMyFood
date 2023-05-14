@@ -1,9 +1,25 @@
-// Mixins
-
-//center the children elements
-@mixin center-children($direction: row) {
+@mixin flexbox(
+	$direction: row,
+	$gap: 0,
+	$justify: normal,
+	$align: normal,
+	$wrap: nowrap
+) {
 	display: flex;
 	flex-direction: $direction;
-	justify-content: center;
-	align-items: center;
+	gap: $gap;
+	justify-content: $justify;
+	align-items: $align;
+	flex-wrap: $wrap;
+}
+
+@mixin setMaxWidthAndCenter($width: 1440px) {
+	width: min(100%, $width);
+	margin: 0 auto;
+}
+
+@mixin hideTextOverflow() {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
