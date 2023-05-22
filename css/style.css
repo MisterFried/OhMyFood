@@ -129,6 +129,101 @@ footer {
     font-size: 2.5rem;
   }
 }
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3137254902);
+}
+.loader__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--light-background-color);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.loader__icon-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.loader__text {
+  text-align: center;
+}
+
+.primary-button {
+  position: relative;
+  padding: 0.9rem 1.3rem;
+  border: none;
+  border-radius: 10rem;
+  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--main-color) 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.primary-button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  border-radius: 10rem;
+  background: linear-gradient(180deg, var(--secondary-color) 25%, var(--main-color) 120%);
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+.primary-button:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+.primary-button:hover::before {
+  opacity: 1;
+}
+
+.like-button {
+  z-index: 1;
+  background: transparent;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+.like-button:hover {
+  opacity: 0;
+}
+.like-button:hover + .-liked {
+  opacity: 1;
+}
+.like-button.-liked {
+  z-index: 0;
+  background: linear-gradient(var(--main-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
 .header {
   position: relative;
 }
@@ -364,6 +459,7 @@ footer {
 .carte-restaurant__name {
   position: relative;
   width: min(100%, 22rem);
+  padding: 0 0.25rem;
 }
 .carte-restaurant__like {
   position: absolute;
@@ -491,101 +587,6 @@ footer {
     margin-right: 2rem;
   }
 }
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 100vw;
-  height: 100vh;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.3137254902);
-}
-.loader__main {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: start;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding: 2rem;
-  border-radius: 1rem;
-  background-color: var(--light-background-color);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-}
-.loader__icon-container {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.loader__text {
-  text-align: center;
-}
-
-.primary-button {
-  position: relative;
-  padding: 0.9rem 1.3rem;
-  border: none;
-  border-radius: 10rem;
-  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--main-color) 100%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-.primary-button::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  content: "";
-  border-radius: 10rem;
-  background: linear-gradient(180deg, var(--secondary-color) 25%, var(--main-color) 120%);
-  transition: opacity 0.2s ease-in-out;
-  opacity: 0;
-}
-.primary-button:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-  transform: scale(1.05);
-}
-.primary-button:hover::before {
-  opacity: 1;
-}
-
-.like-button {
-  z-index: 1;
-  background: transparent;
-  transition: opacity 0.2s ease-in-out;
-  cursor: pointer;
-}
-.like-button:hover {
-  opacity: 0;
-}
-.like-button:hover + .-liked {
-  opacity: 1;
-}
-.like-button.-liked {
-  z-index: 0;
-  background: linear-gradient(var(--main-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transition: opacity 0.2s ease-in-out;
-  opacity: 0;
-}
-
 #loader-icon-1 {
   animation: move-loader-icon 2.5s ease-in-out 0.5s infinite normal none;
 }
