@@ -309,10 +309,10 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 0;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  width: min(20rem, 100%);
+  width: 100%;
   padding: 1.5rem 1.5rem 1.5rem 2rem;
   border-radius: 1.25rem;
   background-color: var(--background-color);
@@ -361,7 +361,7 @@ footer {
 }
 .restaurants__card {
   position: relative;
-  width: min(100%, 500px);
+  width: 100%;
   border-radius: 1rem;
   background-color: var(--light-background-color);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -415,7 +415,7 @@ footer {
   background-color: var(--accent-color);
 }
 
-@media screen and (width > 950px) {
+@media screen and (width > 929px) {
   .fonctionnement__card-container {
     flex-direction: row;
     justify-content: start;
