@@ -3,6 +3,6 @@
 ***
 Intégration des maquettes des différentes pages de "OhMyFood" et ajout d'animations CSS
 
-GitHub Pages : misterfried.github.io/OhMyFood/
+GitHub Pages : https://misterfried.github.io/OhMyFood/
 
 ***
